@@ -1,0 +1,14 @@
+== Why not use ...
+
+- Selenium https://w3c.github.io/webdriver/[Webdriver^]
+- https://docs.cypress.io/faq/questions/general-questions-faq.html#Does-Cypress-use-Selenium-Webdriver[Cypress^]
+- https://pptr.dev/[puppeteer^]
+
+[NOTE.speaker]
+--
+- webdriver is a json wire protocol that talks to the browser, w3c standard draft
+- "post-Selenium" web UI testing tools
+- cypress only supports chrome
+- puppeteer node library uses the chrome dev tools protocol
+- https://www.thoughtworks.com/radar/tools
+--

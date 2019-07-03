@@ -1,0 +1,9 @@
+[%notitle]
+== How does it work
+
+image::{imagedir}/what-hammerhead-does.png[canvas,size=contain]
+
+[NOTE.speaker]
+--
+- https://dzone.com/articles/testcafe-e2e-testing-tool[TestCafe: An e2e Testing Tool That Doesn’t Use Selenium^]
+--

@@ -2,9 +2,13 @@
 :linkattrs:
 :slides: .
 :imagedir: ../images
-= The Topic
+= Testcafe
+Testing Web Applications
 
-include::{slides}/sandbox.adoc[]
+include::{slides}/why-not-use.adoc[]
+include::{slides}/why-testcafe.adoc[]
+include::{slides}/how-testcafe-works.adoc[]
+include::{slides}/demo.adoc[]
 
 == !
 That's it! +

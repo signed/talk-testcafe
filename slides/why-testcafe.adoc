@@ -1,0 +1,17 @@
+== Why https://devexpress.github.io/testcafe/faq/#i-have-heard-that-testcafe-does-not-use-selenium-how-does-it-operate[Testcafe^]
+
+- npm install is all you need
+- isolated test environment
+- Implicit auto-waits mechanism
+- cross browser support
+- full access to the page content
+- You can write fixtures in javascript/typescript
+
+[NOTE.speaker]
+--
+- its a node.js application
+- Each TestCafe test runs as if it was started in a new incognito tab
+- You will have all cookies and storages clean
+- TestCafe uses a URL-rewriting proxy347 under the hood.
+  User actions are emulated via DOM API by a driver script injected by proxy.
+--
