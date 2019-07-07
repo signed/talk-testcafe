@@ -1,4 +1,5 @@
 import * as React from 'react';
+import ChangeWithRandomDelay from './change-with-random-delay';
 import List from './list';
 import RemoteCall from './remote-call';
 import LocalStorageDisplay from './local-storage-display';
@@ -11,7 +12,8 @@ export default class Application extends React.Component {
       <List/>,
       <RemoteCall/>,
       <LocalStorageDisplay localStorageKey="key"/>,
-      <TextInputExamples/>
+      <TextInputExamples/>,
+      <ChangeWithRandomDelay/>
     ];
   }
 }

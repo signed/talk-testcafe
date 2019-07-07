@@ -8,3 +8,4 @@
 1. Test hook before/after 
 1. Configuration CLI/Configuration file/API
 1. Run/Debug from intellij
+1. Assertions
