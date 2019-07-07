@@ -1,7 +1,5 @@
 import { ClientFunction } from 'testcafe';
 
-const getPageUrl = ClientFunction(() => window.location.href);
-
 fixture('run code in client')
   .page('http://localhost:8080/');
 
@@ -14,5 +12,16 @@ test('Get UA', async (tc) => {
 });
 
 test('Check the page URL', async (tc) => {
+  const getPageUrl = ClientFunction(() => window.location.href);
   await tc.expect(getPageUrl()).contains('http://localhost:8080/');
+});
+
+test('watch what you log', async (tc) => {
+  console.log('hello in the test');
+  const writeToClientConsole = ClientFunction(() => console.log('hello in the client'));
+  await writeToClientConsole();
+
+  const logs = await tc.getBrowserConsoleMessages();
+
+  await tc.expect(logs.log).contains('hello in the client')
 });
