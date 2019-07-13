@@ -1,0 +1,9 @@
+[%notitle]
+== Summary
+[horizontal]
+.Testcafe terms
+Fixture:: groups tests for a specific feature
+Test:: run on the server
+Selectors:: select elements on the page
+Actions:: interact with the page
+ClientFunctions:: execute code in the application

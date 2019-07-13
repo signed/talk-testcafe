@@ -6,9 +6,14 @@
 Testing Web Applications
 
 include::{slides}/why-not-use.adoc[]
+
 include::{slides}/why-testcafe.adoc[]
+
 include::{slides}/how-testcafe-works.adoc[]
+
 include::{slides}/demo.adoc[]
+
+include::{slides}/summary.adoc[]
 
 == !
 That's it! +
