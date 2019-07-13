@@ -19,6 +19,7 @@
 
 # Quirks
 - Console Error Abort
+- debug break points lost between runs
+- browser reload after debugging too long
 - hot reload in live mode
 - Not all Promises are equal
-- browser reload after debugging too long
