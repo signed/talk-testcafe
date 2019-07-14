@@ -1,6 +1,6 @@
 import { Selector } from 'testcafe';
 
-fixture.only('testcafe example')
+fixture.skip('testcafe example')
   .page('http://devexpress.github.io/testcafe/example');
 
 test('give feedback on the testcafe example page', async tc => {
