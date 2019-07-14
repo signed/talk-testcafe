@@ -8,6 +8,5 @@ test('record calls', async (tc) => {
   const surpriseText = Selector('[data-automation-id=change-with-random-delay__surprise]').innerText;
 
   await tc.click(revealButton)
-    .expect(surpriseText)
-    .eql('revealed');
+    .expect(surpriseText).eql('revealed');
 });
