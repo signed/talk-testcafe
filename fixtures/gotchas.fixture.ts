@@ -29,7 +29,15 @@ test('restarts browser if you are stuck in a client code breakpoint for too long
 });
 
 test('data passed between client (application under test) and server (testcafe) is serialized and de-serialized', async (tc) => {
-
+  // @ts-ignore
+  const object = await tc.eval(() => window.globalStateToProveAPoint);
+  await tc.expect(object.value).eql('initial');
+  // @ts-ignore
+  await tc.eval(() => window.globalStateToProveAPoint.value = 'updated');
+  await tc.expect(object.value).eql('initial');
+  // @ts-ignore
+  const objectUpdated = await tc.eval(() => window.globalStateToProveAPoint);
+  await tc.expect(objectUpdated.value).eql('updated');
 });
 
 
