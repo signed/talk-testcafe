@@ -1,5 +1,5 @@
 {
-  "name": "contract-tests",
+  "name": "@signed/talk-testcafe",
   "version": "1.0.0",
   "description": "slides and code for the testcafe introduction",
   "main": "index.js",
