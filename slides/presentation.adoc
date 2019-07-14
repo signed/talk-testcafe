@@ -13,11 +13,11 @@ include::{slides}/how-testcafe-works.adoc[]
 
 include::{slides}/demo.adoc[]
 
-include::{slides}/summary.adoc[]
-
 == !
 That's it! +
 Any Questions?
+
+include::{slides}/summary.adoc[]
 
 [%notitle]
 == Melting Pot

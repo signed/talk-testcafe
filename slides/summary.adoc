@@ -1,10 +1,14 @@
 [%notitle]
 == Summary
 [horizontal]
-.Testcafe terms
 Fixture:: groups tests for a specific feature
 Test:: run on the server
 TestController:: exposes test api methods
 Actions:: manipulate the test webpage
 Selectors:: select elements on the page and obtain data
-ClientFunctions:: execute code in the application
+
+[%notitle]
+=== Summary
+[horizontal]
+ClientFunction:: execute code in the application
+RequestHook:: Record or stub http requests
