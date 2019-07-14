@@ -13,10 +13,10 @@ import 'hello-actions.fixture'; // Actions
    */
 }
 
+import 'hot-reloading-live-mode';
 import 'call-code-in-the-client.fixture';
 import 'local-storage-in-the-client.fixture';
 import 'remote-calls.fixture';
-import 'hot-reloading-live-mode';
 
 {
   /*
