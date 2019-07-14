@@ -1,4 +1,3 @@
-// https://devexpress.github.io/testcafe/documentation/test-api/selecting-page-elements/selectors/
 import { RequestLogger, RequestMock, Selector } from 'testcafe';
 
 fixture('asserts and ')
