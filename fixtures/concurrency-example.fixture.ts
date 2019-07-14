@@ -1,7 +1,8 @@
 // sample taken from https://github.com/DevExpress/testcafe/issues/2228
 import { ClientFunction } from 'testcafe';
 
-fixture.skip('Concurrent').page('example.com');
+fixture.skip('Concurrent')
+  .page('https://example.org');
 
 const timeline: Array<string> = [];
 

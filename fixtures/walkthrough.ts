@@ -9,22 +9,14 @@ import 'hello-actions.fixture'; // Actions
      - enter a name
      - rate test cafe with a 7
      - write a verbatim
-     - submit and make sure it was send
+     - submit and make sure it was sent
    */
 }
-
 
 import 'call-code-in-the-client.fixture';
 import 'local-storage-in-the-client.fixture';
 import 'remote-calls.fixture';
-{
-  /*
-   - Client Functions
-   - Request Mocks
-   - Live Mode
-   */
-
-}
+import 'hot-reloading-live-mode'
 
 {
   /*
@@ -37,17 +29,16 @@ import 'remote-calls.fixture';
   /*
    - command line runner
    - configuration file
-   - write your own runner with the offical api
+   - write your own runner with the official api
    */
 }
 
 {
   /*
-   # Quirks
+   # Gotchas
    - Console Error Abort
    - debug break points lost between runs
    - browser reload after debugging too long
-   - hot reload in live mode
    - Not all Promises are equal
    */
 }
