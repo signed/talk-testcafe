@@ -14,7 +14,7 @@ test('record calls', async (tc) => {
 
 fixture('testcafe example').page('http://devexpress.github.io/testcafe/example');
 
-test.meta('', '')('test name', async tc => {
+test('test name', async tc => {
   const sliderValues = Selector('.slider-value');
   await tc
     .expect(sliderValues.count).eql(10)
