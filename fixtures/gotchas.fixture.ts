@@ -18,13 +18,14 @@ test('watch what you log', async (tc) => {
 
 const emailInput = Selector('#email-input');
 
-test.only('not all promises are equal', async (tc) => {
+test('not all promises are equal', async (tc) => {
   await tc.typeText(emailInput, 'me@example.org');
   await tc.expect(emailInput.value).eql('me@example.org');
 });
 
+// looks like source maps do not work
 test('restarts browser if you are stuck in a client code breakpoint for too long', async (tc) => {
-
+  await tc.click(Selector('#button-to-trigger-breakpoint'));
 });
 
 test('data passed between client (application under test) and server (testcafe) is serialized and de-serialized', async (tc) => {
