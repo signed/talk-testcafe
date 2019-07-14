@@ -1,4 +1,4 @@
-// only, skip, wait, debug, missing await
+// only, skip, wait, debug (explain the window), missing await
 import 'testcafe';
 
 fixture('first')

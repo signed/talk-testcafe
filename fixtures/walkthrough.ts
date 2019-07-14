@@ -7,7 +7,8 @@ import 'hello-actions.fixture'; // Actions
   /* hands on with http://devexpress.github.io/testcafe/example
      - open the page
      - enter a name
-     - rate test cafe from 1 to 10
+     - rate test cafe with a 7
+     - write a verbatim
      - submit and make sure it was send
    */
 }
