@@ -1,5 +1,6 @@
 {
   "src": [
     "fixtures/**/**/*.fixture.ts"
-  ]
+  ],
+  "selectorTimeout": 3000
 }
