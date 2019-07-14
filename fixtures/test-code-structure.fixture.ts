@@ -1,6 +1,6 @@
 // only, skip, wait, debug (explain the window), missing await, before/after
 // https://devexpress.github.io/testcafe/documentation/test-api/test-code-structure.html
-// https://devexpress.github.io/testcafe/documentation/recipes/debug-in-webstorm.html
+// https://devexpress.github.io/testcafe/documentation/recipes/debug-tests/
 import 'testcafe';
 
 fixture('first')
