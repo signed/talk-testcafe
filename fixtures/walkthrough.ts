@@ -3,6 +3,7 @@ import 'test-hooks.fixture';  // Test hook before/after
 import 'hello-selectors.fixture'; // Selectors
 import 'selectors-and-asserts.fixture';  // Assertions
 import 'hello-actions.fixture'; // Actions
+
 {
   /* hands on with http://devexpress.github.io/testcafe/example
      - open the page
@@ -17,29 +18,6 @@ import 'hot-reloading-live-mode';
 import 'call-code-in-the-client.fixture';
 import 'local-storage-in-the-client.fixture';
 import 'remote-calls.fixture';
+import 'gotchas.fixture';
 
-{
-  /*
-   - Configuration CLI/Configuration file/API
-   - Run/Debug from intellij
-   */
-}
-
-{
-  /*
-   - command line runner
-   - configuration file
-   - write your own runner with the official api
-   */
-}
-
-{
-  /*
-   # Gotchas
-   - Console Error Abort
-   - debug break points lost between runs
-   - browser reload after debugging too long
-   - Not all Promises are equal
-   */
-}
 
