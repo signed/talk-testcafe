@@ -19,8 +19,8 @@ test('watch what you log', async (tc) => {
 const emailInput = Selector('#email-input');
 
 test.only('not all promises are equal', async (tc) => {
-  await tc.typeText(emailInput, 'initial@example.org');
-  await tc.expect(emailInput.value).eql('initial@example.org');
+  await tc.typeText(emailInput, 'me@example.org');
+  await tc.expect(emailInput.value).eql('me@example.org');
 });
 
 test('restarts browser if you are stuck in a client code breakpoint for too long', async (tc) => {
