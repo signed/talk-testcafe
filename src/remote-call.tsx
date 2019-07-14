@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 export default class RemoteCall extends React.Component<any, { status: number, body: string }> {
+  private readonly url = 'https://httpbin.org/user-agent';
 
   constructor(props: any) {
     super(props);
@@ -11,10 +12,12 @@ export default class RemoteCall extends React.Component<any, { status: number, b
   }
 
   public render(): React.ReactNode {
-    const { body, status } = this.state;
+    const {body, status} = this.state;
     return (
       <div>
-        <button onClick={() => this.executeRemoteCall()} data-automation-id="remote-call__execute">execute remote call</button>
+        <button onClick={() => this.executeRemoteCall()} data-automation-id="remote-call__execute">execute remote call
+        </button>
+        to <a href={this.url} target="_blank">{this.url}</a>
         <p>
           Status: <span key="status" data-automation-id="remote-call__status">{status}</span>
         </p>
@@ -30,8 +33,8 @@ export default class RemoteCall extends React.Component<any, { status: number, b
       .then(async result => {
         const status = result.status;
         const body = await result.text();
-        return this.setState({ status, body });
+        return this.setState({status, body});
       })
-      .catch(error => this.setState({ status: error.status }));
+      .catch(error => this.setState({status: error.status}));
   }
 }

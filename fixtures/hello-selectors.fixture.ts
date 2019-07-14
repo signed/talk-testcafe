@@ -9,7 +9,7 @@ fixture('Getting Started')
   });
 
 test('vanilla selectors', async (tc) => {
-  const selector = Selector('#root > ul > li').nth(0);
+  const selector = Selector('ul > li').nth(0);
   await tc.expect(selector.textContent).eql('one');
 });
 
