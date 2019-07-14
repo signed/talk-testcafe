@@ -4,8 +4,8 @@
   "description": "slides and code for the testcafe introduction",
   "main": "index.js",
   "scripts": {
-    "testcafe:run": "testcafe chrome fixtures/**/**/*.fixture.ts",
-    "testcafe:headless": "testcafe chrome:headless fixtures/**/**/*.fixture.ts --reporter spec,xunit:reports/report.xml,json:reports/report.json",
+    "testcafe:run": "testcafe chrome ",
+    "testcafe:headless": "testcafe chrome:headless --reporter spec,xunit:reports/report.xml,json:reports/report.json",
     "testcafe:debug": "testcafe $NODE_DEBUG_OPTION chrome",
     "testcafe:ci": "start-server-and-test start http://localhost:8080 testcafe:headless",
     "start": "webpack-dev-server --mode development",
