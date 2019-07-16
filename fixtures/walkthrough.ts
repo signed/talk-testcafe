@@ -14,7 +14,7 @@ import 'hello-actions.fixture'; // Actions
    */
 }
 
-import 'hot-reloading-live-mode';
+import 'hot-reloading-live-mode.fixture';
 import 'call-code-in-the-client.fixture';
 import 'local-storage-in-the-client.fixture';
 import 'remote-calls.fixture';
