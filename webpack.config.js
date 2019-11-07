@@ -2,8 +2,11 @@ const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-//  devtool: 'inline-source-map',
-  entry: './src/index.tsx',
+ devtool: 'inline-source-map',
+  entry: {
+    main: './src/index.tsx',
+    stacktrace: './src/stacktrace/index.tsx'
+  },
   module: {
     rules: [
       {
@@ -17,14 +20,20 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js']
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   }
   ,
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
-      filename: "./index.html"
+      filename: "./index.html",
+      chunks: ['main']
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/index.html",
+      filename: "./stacktrace.html",
+      chunks: ['stacktrace']
     })
   ]
 };

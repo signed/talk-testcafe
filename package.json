@@ -10,6 +10,7 @@
     "testcafe:ci": "start-server-and-test start http://localhost:8080 testcafe:headless",
     "start": "webpack-dev-server --mode development",
     "start:dev": "yarn start --open",
+    "build": "webpack --mode=production",
     "present": "node scripts/scribeV2.js"
   },
   "private": true,
