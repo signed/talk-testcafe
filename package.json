@@ -10,6 +10,7 @@
     "testcafe:ci": "start-server-and-test start http://localhost:8080 testcafe:headless",
     "start": "webpack-dev-server --mode development",
     "start:dev": "yarn start --open",
+    "deploy": "gh-pages -d dist",
     "build": "webpack --mode=production",
     "present": "node scripts/scribeV2.js"
   },
@@ -28,6 +29,7 @@
     "awesome-typescript-loader": "5.2.1",
     "browser-sync": "2.26.7",
     "chokidar-cli": "2.1.0",
+    "gh-pages": "2.1.1",
     "html-webpack-plugin": "3.2.0",
     "opener": "1.5.1",
     "start-server-and-test": "1.10.6",
