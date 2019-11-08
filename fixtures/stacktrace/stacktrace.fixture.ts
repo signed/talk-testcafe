@@ -1,7 +1,7 @@
 import { Selector } from 'testcafe';
 
 fixture('stack trace from application on console')
-  .page('http://localhost:8080/stacktrace.html');
+  .page('https://signed.github.io/talk-testcafe/stacktrace.html');
 
 test.skip('line numbers should match', async (tc) => {
   const button = Selector('button').nth(0);
