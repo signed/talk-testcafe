@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "testcafe:run": "testcafe chrome",
-    "testcafe:run:selenoid": "testcafe selenium:chrome",
+    "testcafe:run:selenoid": "SELENIUM_CAPABILITIES=selenoid/capabilities.json testcafe selenium:chrome",
     "testcafe:headless": "testcafe chrome:headless --reporter spec,xunit:reports/report.xml,json:reports/report.json",
     "testcafe:debug": "testcafe $NODE_DEBUG_OPTION chrome",
     "testcafe:ci": "start-server-and-test start http://localhost:8080 testcafe:headless",

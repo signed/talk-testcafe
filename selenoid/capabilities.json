@@ -1,0 +1,33 @@
+{
+  "chrome": {
+    "name": "testcafe talk chrome",
+    "enableVNC": true,
+    "enableVideo": true,
+    "goog:chromeOptions": {
+      "args": [
+        "--start-maximized",
+        "--allow-insecure-localhost",
+        "--ignore-certificate-errors",
+        "--disable-dev-shm-usage",
+        "--disable-extensions",
+        "--disable-gpu",
+        "--disable-popup-blocking",
+        "--no-sandbox",
+        "--use-fake-ui-for-media-stream",
+        "--use-fake-device-for-media-stream"
+      ]
+    }
+  },
+  "firefox": {
+    "name": "testcafe talk firefox",
+    "enableVNC": true,
+    "enableVideo": true,
+    "acceptInsecureCerts": true,
+    "moz:firefoxOptions": {
+      "prefs": {
+        "media.navigator.permission.disabled": true,
+        "media.navigator.streams.fake": true
+      }
+    }
+  }
+}

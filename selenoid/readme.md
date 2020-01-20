@@ -1,3 +1,7 @@
+# links
+- https://github.com/aerokube/selenoid
+- https://github.com/alexschwantes/testcafe-browser-provider-selenium
+
 # how to get started
 1. `docker-compose up`
    1. http://localhost:8081/ the selenoid-ui
@@ -9,6 +13,11 @@
    1. `docker pull selenoid/vnc:chrome_79.0` 
    1. `docker pull selenoid/vnc:firefox_72.0` 
 1. `yarn testcafe:run:selenoid` 
+
+# vnc
+- adjust `selenoid/capabilities.json` on a per browser level (you can override on a browser version level)
+- override the default location in `package.json` script
+- `yarn testcafe:run:selenoid` 
 
 # [video recording](https://aerokube.com/selenoid/latest/#_video_recording)
 - docker pull selenoid/video-recorder:latest-release
