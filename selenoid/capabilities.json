@@ -3,6 +3,7 @@
     "name": "testcafe talk chrome",
     "enableVNC": true,
     "enableVideo": true,
+    "enableLog": true,
     "goog:chromeOptions": {
       "args": [
         "--start-maximized",
@@ -22,6 +23,7 @@
     "name": "testcafe talk firefox",
     "enableVNC": true,
     "enableVideo": true,
+    "enableLog": true,
     "acceptInsecureCerts": true,
     "moz:firefoxOptions": {
       "prefs": {

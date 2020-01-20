@@ -8,9 +8,11 @@ services:
     volumes:
       - "$PWD:/etc/selenoid/:ro" # assumed current dir contains browsers.json
       - "$PWD/video/:/opt/selenoid/video/"
+      - "$PWD/logs/:/opt/selenoid/logs/"
       - "/var/run/docker.sock:/var/run/docker.sock"
     environment:
       - OVERRIDE_VIDEO_OUTPUT_DIR=$PWD/video/
+    command: ["--log-output-dir""/opt/selenoid/logs"]
   selenoid-ui:
     image: "aerokube/selenoid-ui:1.9.1"
     network_mode: bridge
