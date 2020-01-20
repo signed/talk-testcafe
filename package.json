@@ -4,7 +4,8 @@
   "description": "slides and code for the testcafe introduction",
   "main": "index.js",
   "scripts": {
-    "testcafe:run": "testcafe chrome ",
+    "testcafe:run": "testcafe chrome",
+    "testcafe:run:selenoid": "testcafe selenium:chrome",
     "testcafe:headless": "testcafe chrome:headless --reporter spec,xunit:reports/report.xml,json:reports/report.json",
     "testcafe:debug": "testcafe $NODE_DEBUG_OPTION chrome",
     "testcafe:ci": "start-server-and-test start http://localhost:8080 testcafe:headless",
@@ -34,6 +35,7 @@
     "opener": "1.5.1",
     "start-server-and-test": "1.10.6",
     "testcafe": "1.8.0",
+    "testcafe-browser-provider-selenium": "0.4.0",
     "testcafe-react-selectors": "4.0.0",
     "typescript": "3.7.5",
     "webpack": "4.41.5",
