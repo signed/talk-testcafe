@@ -1,6 +1,9 @@
 # links
 - https://github.com/aerokube/selenoid
 - https://github.com/alexschwantes/testcafe-browser-provider-selenium
+- webdriver
+  - https://w3c.github.io/webdriver/
+  - https://w3c.github.io/webdriver/#protocol-extensions
 
 # how to get started
 1. `docker-compose up`
