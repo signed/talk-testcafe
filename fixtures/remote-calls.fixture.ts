@@ -29,7 +29,7 @@ test('dynamic responses', async (tc) => {
       const body = { counter: counter += 1 };
       response.headers['content-type'] = 'application/json';
       response.statusCode = 201;
-      response.setBody(body);
+      response.setBody(JSON.stringify(body));
     }, 200, {
       'Access-Control-Allow-Origin': '*'
     });
