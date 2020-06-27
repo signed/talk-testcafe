@@ -1,7 +1,7 @@
 version: '3'
 services:
   selenoid:
-    image: "aerokube/selenoid:1.10.0"
+    image: "selenoid/hub:1.10.0"
     network_mode: bridge
     ports:
       - "4444:4444"
@@ -14,7 +14,7 @@ services:
       - OVERRIDE_VIDEO_OUTPUT_DIR=$PWD/video/
     command: ["--log-output-dir", "/opt/selenoid/logs"]
   selenoid-ui:
-    image: "aerokube/selenoid-ui:1.9.1"
+    image: "aerokube/selenoid-ui:1.10.0"
     network_mode: bridge
     links:
       - selenoid

@@ -25,3 +25,7 @@
 
 # [video recording](https://aerokube.com/selenoid/latest/#_video_recording)
 - docker pull selenoid/video-recorder:latest-release ([hub](https://hub.docker.com/r/selenoid/video-recorder))
+
+# other images
+- https://hub.docker.com/r/aerokube/selenoid or the alias https://hub.docker.com/r/selenoid/hub/tags
+- https://hub.docker.com/r/aerokube/selenoid-ui/
