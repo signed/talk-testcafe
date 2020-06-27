@@ -12,3 +12,5 @@ ReactDOM.render(
   app,
   document.getElementById('root'),
 );
+
+console.log('hello testcafe')
