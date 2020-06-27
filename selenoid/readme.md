@@ -15,6 +15,7 @@
 1. download the browser images you want to use. This has to be in sync with the images configured in `browsers.json`
    1. `docker pull selenoid/vnc:chrome_79.0` 
    1. `docker pull selenoid/vnc:firefox_72.0` 
+1. `yarn start` to run the web application
 1. `yarn testcafe:run:selenoid` 
 
 # vnc
