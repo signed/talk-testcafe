@@ -12,7 +12,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock"
     environment:
       - OVERRIDE_VIDEO_OUTPUT_DIR=$PWD/video/
-    command: ["--log-output-dir""/opt/selenoid/logs"]
+    command: ["--log-output-dir", "/opt/selenoid/logs"]
   selenoid-ui:
     image: "aerokube/selenoid-ui:1.9.1"
     network_mode: bridge
