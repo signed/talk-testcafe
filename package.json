@@ -9,7 +9,7 @@
     "testcafe:headless": "testcafe chrome:headless --reporter spec,xunit:reports/report.xml,json:reports/report.json",
     "testcafe:debug": "testcafe $NODE_DEBUG_OPTION chrome",
     "testcafe:ci": "start-server-and-test start http://localhost:8080 testcafe:headless",
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack server --mode development",
     "start:dev": "yarn start --open",
     "deploy": "gh-pages -d dist",
     "build": "webpack --mode=production",
@@ -17,23 +17,23 @@
   },
   "private": true,
   "dependencies": {
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@signed/scribe": "0.2.0",
-    "@types/react": "16.9.49",
-    "@types/react-dom": "16.9.8",
+    "@signed/scribe": "0.3.0",
+    "@types/react": "17.0.14",
+    "@types/react-dom": "17.0.9",
     "awesome-typescript-loader": "5.2.1",
-    "gh-pages": "3.1.0",
-    "html-webpack-plugin": "4.5.0",
-    "start-server-and-test": "1.11.4",
-    "testcafe": "1.9.3",
-    "testcafe-browser-provider-selenium": "1.0.1",
-    "testcafe-react-selectors": "4.0.0",
-    "typescript": "4.0.3",
-    "webpack": "4.44.2",
-    "webpack-cli": "3.3.12",
-    "webpack-dev-server": "3.11.0"
+    "gh-pages": "3.2.3",
+    "html-webpack-plugin": "5.3.2",
+    "start-server-and-test": "1.12.6",
+    "testcafe": "1.14.2",
+    "testcafe-browser-provider-selenium": "1.2.0",
+    "testcafe-react-selectors": "4.1.5",
+    "typescript": "4.3.5",
+    "webpack": "5.43.0",
+    "webpack-cli": "4.7.2",
+    "webpack-dev-server": "3.11.2"
   }
 }
