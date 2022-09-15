@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
-import Application from './application'
+import { Application } from './application'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
