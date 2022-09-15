@@ -1,4 +1,4 @@
-import 'testcafe'
+import { fixture } from 'testcafe'
 import { ClientFunction, Selector } from 'testcafe'
 
 fixture('testcafe gotchas').page('http://localhost:8080/')
@@ -28,12 +28,15 @@ test('restarts browser if you are stuck in a client code breakpoint for too long
 })
 
 test('data passed between client (application under test) and server (testcafe) is serialized and de-serialized', async (tc) => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const object = await tc.eval(() => window.globalStateToProveAPoint)
   await tc.expect(object.value).eql('initial')
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   await tc.eval(() => (window.globalStateToProveAPoint.value = 'updated'))
   await tc.expect(object.value).eql('initial')
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const objectUpdated = await tc.eval(() => window.globalStateToProveAPoint)
   await tc.expect(objectUpdated.value).eql('updated')
