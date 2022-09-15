@@ -1,32 +1,23 @@
 import * as React from 'react'
 
-export class Stacktrace extends React.Component<unknown, unknown> {
-  constructor(props: unknown, private message: string = 'you asked for it') {
-    super(props)
-    this.triggerError = this.triggerError.bind(this)
-  }
+export const Stacktrace = () => (
+  <div>
+    <button onClick={triggerError}>trigger error</button>
+  </div>
+)
 
-  render() {
-    return (
-      <div>
-        <button onClick={this.triggerError}>trigger error</button>
-      </div>
-    )
-  }
+const triggerError = () => {
+  very()
+}
 
-  private triggerError() {
-    this.very()
-  }
+const very = () => {
+  deep()
+}
 
-  private very() {
-    this.deep()
-  }
+const deep = () => {
+  callstack()
+}
 
-  private deep() {
-    this.callstack()
-  }
-
-  private callstack() {
-    throw new Error(this.message)
-  }
+const callstack = () => {
+  throw new Error('you asked for it')
 }
