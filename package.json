@@ -8,6 +8,7 @@
     "testcafe:run": "testcafe chrome",
     "testcafe:run:selenoid": "SELENIUM_CAPABILITIES=selenoid/capabilities.json testcafe selenium:chrome",
     "testcafe:headless": "testcafe chrome:headless --reporter spec,xunit:reports/report.xml,json:reports/report.json",
+    "testcafe:quarantine": "testcafe --quarantine-mode attemptLimit=4,successThreshold=2 chrome fixtures/quarantine/quarantine.fixture.ts",
     "testcafe:debug": "testcafe $NODE_DEBUG_OPTION chrome",
     "testcafe:watch": "testcafe --live chrome",
     "testcafe:ci": "start-server-and-test start http://localhost:8080 testcafe:headless",
