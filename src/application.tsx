@@ -8,7 +8,7 @@ import ButtonWithBreakpoint from './button-with-breakpoint';
 import BorderWithDescription from './BorderWithDescription';
 
 export default class Application extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return [
       <div>Hello World</div>,
       <BorderWithDescription>

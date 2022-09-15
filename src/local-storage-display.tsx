@@ -15,7 +15,7 @@ export default class LocalStorageDisplay extends React.Component<Props, State> {
     this.state = {value: ''};
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const keyValue = this.state.value === '' ? (<span>nothing there</span>) :
       (<React.Fragment>
         {this.props.localStorageKey}: <span data-automation-id="value-from-local-storage">{this.state.value}</span>

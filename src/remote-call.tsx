@@ -11,7 +11,7 @@ export default class RemoteCall extends React.Component<any, { status: number, b
     };
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const {body, status} = this.state;
     return (
       <div>
