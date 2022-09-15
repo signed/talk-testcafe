@@ -1,13 +1,9 @@
 import * as React from 'react'
 import { ListItem } from './list-item'
 
-export class List extends React.Component {
-  public render() {
-    return (
-      <ul>
-        <ListItem content={'one'} />
-        <ListItem content={'two'} />
-      </ul>
-    )
-  }
-}
+export const List = () => (
+  <ul>
+    <ListItem content={'one'} />
+    <ListItem content={'two'} />
+  </ul>
+)
