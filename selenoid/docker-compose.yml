@@ -1,23 +1,23 @@
 version: '3'
 services:
   selenoid:
-    image: "selenoid/hub:1.10.0"
+    image: 'selenoid/hub:1.10.0'
     network_mode: bridge
     ports:
-      - "4444:4444"
+      - '4444:4444'
     volumes:
-      - "$PWD:/etc/selenoid/:ro" # assumed current dir contains browsers.json
-      - "$PWD/video/:/opt/selenoid/video/"
-      - "$PWD/logs/:/opt/selenoid/logs/"
-      - "/var/run/docker.sock:/var/run/docker.sock"
+      - '$PWD:/etc/selenoid/:ro' # assumed current dir contains browsers.json
+      - '$PWD/video/:/opt/selenoid/video/'
+      - '$PWD/logs/:/opt/selenoid/logs/'
+      - '/var/run/docker.sock:/var/run/docker.sock'
     environment:
       - OVERRIDE_VIDEO_OUTPUT_DIR=$PWD/video/
-    command: ["--log-output-dir", "/opt/selenoid/logs"]
+    command: ['--log-output-dir', '/opt/selenoid/logs']
   selenoid-ui:
-    image: "aerokube/selenoid-ui:1.10.0"
+    image: 'aerokube/selenoid-ui:1.10.0'
     network_mode: bridge
     links:
       - selenoid
     ports:
-      - "8081:8080"
-    command: ["--selenoid-uri", "http://selenoid:4444"]
+      - '8081:8080'
+    command: ['--selenoid-uri', 'http://selenoid:4444']

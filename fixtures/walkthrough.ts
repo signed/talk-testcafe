@@ -1,8 +1,8 @@
-import 'test-code-structure.fixture';  // Basic tests structure
-import 'test-hooks.fixture';  // Test hook before/after
-import 'hello-selectors.fixture'; // Selectors
-import 'selectors-and-asserts.fixture';  // Assertions
-import 'hello-actions.fixture'; // Actions
+import 'test-code-structure.fixture' // Basic tests structure
+import 'test-hooks.fixture' // Test hook before/after
+import 'hello-selectors.fixture' // Selectors
+import 'selectors-and-asserts.fixture' // Assertions
+import 'hello-actions.fixture' // Actions
 
 {
   /* hands on with http://devexpress.github.io/testcafe/example
@@ -14,10 +14,8 @@ import 'hello-actions.fixture'; // Actions
    */
 }
 
-import 'hot-reloading-live-mode.fixture';
-import 'call-code-in-the-client.fixture';
-import 'local-storage-in-the-client.fixture';
-import 'remote-calls.fixture';
-import 'gotchas.fixture';
-
-
+import 'hot-reloading-live-mode.fixture'
+import 'call-code-in-the-client.fixture'
+import 'local-storage-in-the-client.fixture'
+import 'remote-calls.fixture'
+import 'gotchas.fixture'

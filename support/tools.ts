@@ -1,3 +1,3 @@
 export function constantString(): string {
-  return '42';
+  return '42'
 }

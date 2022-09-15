@@ -1,13 +1,13 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import Application from './application';
+import * as React from 'react'
+import * as ReactDOM from 'react-dom/client'
+import Application from './application'
 
 // @ts-ignore
 window.globalStateToProveAPoint = {
-  'value': 'initial'
-};
+  value: 'initial',
+}
 
-const root = ReactDOM.createRoot(document.getElementById('root')!);
-root.render((<Application/>))
+const root = ReactDOM.createRoot(document.getElementById('root')!)
+root.render(<Application />)
 
 console.log('hello testcafe')

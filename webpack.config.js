@@ -1,39 +1,38 @@
-const path = require('path');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require('path')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
- devtool: 'inline-source-map',
+  devtool: 'inline-source-map',
   entry: {
     main: './src/index.tsx',
-    stacktrace: './src/stacktrace/index.tsx'
+    stacktrace: './src/stacktrace/index.tsx',
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         use: 'awesome-typescript-loader',
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+      },
+    ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist')
-  }
-  ,
+    path: path.resolve(__dirname, 'dist'),
+  },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html",
-      chunks: ['main']
+      template: './src/index.html',
+      filename: './index.html',
+      chunks: ['main'],
     }),
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./stacktrace.html",
-      chunks: ['stacktrace']
-    })
-  ]
-};
+      template: './src/index.html',
+      filename: './stacktrace.html',
+      chunks: ['stacktrace'],
+    }),
+  ],
+}

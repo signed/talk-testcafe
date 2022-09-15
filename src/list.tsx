@@ -1,13 +1,13 @@
-import * as React from 'react';
-import ListItem from './list-item';
+import * as React from 'react'
+import ListItem from './list-item'
 
 export default class List extends React.Component {
-  public  render() {
+  public render() {
     return (
       <ul>
-        <ListItem content={'one'}/>
-        <ListItem content={'two'}/>
+        <ListItem content={'one'} />
+        <ListItem content={'two'} />
       </ul>
-    );
+    )
   }
 }
