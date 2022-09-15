@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@signed/prettier-config": "0.1.0",
-    "@signed/scribe": "0.3.0",
+    "@signed/scribe": "0.4.0",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
     "awesome-typescript-loader": "5.2.1",
