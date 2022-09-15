@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export default class ChangeWithRandomDelay extends React.Component<unknown, { reveal: boolean; timeout: number }> {
+export class ChangeWithRandomDelay extends React.Component<unknown, { reveal: boolean; timeout: number }> {
   constructor(props: unknown) {
     super(props)
     const maxTimeoutInMilliseconds = 2900

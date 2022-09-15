@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export default class TextInputExample extends React.Component {
+export class TextInputExample extends React.Component {
   public render() {
     return (
       <div>

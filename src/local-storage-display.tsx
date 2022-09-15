@@ -8,7 +8,7 @@ interface State {
   value: string
 }
 
-export default class LocalStorageDisplay extends React.Component<Props, State> {
+export class LocalStorageDisplay extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = { value: '' }

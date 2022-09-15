@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export default class ButtonWithBreakpoint extends React.Component {
+export class ButtonWithBreakpoint extends React.Component {
   public render() {
     return (
       <button id="button-to-trigger-breakpoint" onClick={() => this.handleClick()}>

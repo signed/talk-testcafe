@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { BorderWithDescription } from './BorderWithDescription'
-import ButtonWithBreakpoint from './button-with-breakpoint'
-import ChangeWithRandomDelay from './change-with-random-delay'
-import List from './list'
-import LocalStorageDisplay from './local-storage-display'
-import RemoteCall from './remote-call'
-import TextInputExamples from './text-input-examples'
+import { ButtonWithBreakpoint } from './button-with-breakpoint'
+import { ChangeWithRandomDelay } from './change-with-random-delay'
+import { List } from './list'
+import { LocalStorageDisplay } from './local-storage-display'
+import { RemoteCall } from './remote-call'
+import { TextInputExample } from './text-input-examples'
 
 export const Application = () => (
   <>
@@ -20,7 +20,7 @@ export const Application = () => (
       <LocalStorageDisplay localStorageKey="key" />
     </BorderWithDescription>
     <BorderWithDescription>
-      <TextInputExamples />
+      <TextInputExample />
     </BorderWithDescription>
     <BorderWithDescription>
       <ChangeWithRandomDelay />

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export default class RemoteCall extends React.Component<unknown, { status: number; body: string }> {
+export class RemoteCall extends React.Component<unknown, { status: number; body: string }> {
   private readonly url = 'https://httpbin.org/user-agent'
 
   constructor(props: unknown) {
