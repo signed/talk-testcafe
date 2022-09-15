@@ -1,50 +1,46 @@
 import * as React from 'react'
+import { useState } from 'react'
 
-export class RemoteCall extends React.Component<unknown, { status: number; body: string }> {
-  private readonly url = 'https://httpbin.org/user-agent'
+const url = 'https://httpbin.org/user-agent'
+const initialState = {
+  status: -1,
+  body: '',
+}
 
-  constructor(props: unknown) {
-    super(props)
-    this.state = {
-      status: -1,
-      body: '',
-    }
-  }
+export const RemoteCall = () => {
+  const [state, setState] = useState(initialState)
 
-  public render() {
-    const { body, status } = this.state
-    return (
-      <div>
-        <button onClick={() => this.executeRemoteCall()} data-automation-id="remote-call__execute">
-          execute remote call
-        </button>
-        to{' '}
-        <a href={this.url} target="_blank">
-          {this.url}
-        </a>
-        <p>
-          Status:{' '}
-          <span key="status" data-automation-id="remote-call__status">
-            {status}
-          </span>
-        </p>
-        <p>
-          Body:{' '}
-          <span key="body" data-automation-id="remote-call__body">
-            {body}
-          </span>
-        </p>
-      </div>
-    )
-  }
-
-  private executeRemoteCall() {
+  const executeRemoteCall = () =>
     fetch('https://httpbin.org/user-agent')
       .then(async (result) => {
         const status = result.status
         const body = await result.text()
-        return this.setState({ status, body })
+        return setState({ status, body })
       })
-      .catch((error) => this.setState({ status: error.status }))
-  }
+      .catch((error) => setState({ status: error.status, body: '' }))
+
+  const { body, status } = state
+  return (
+    <div>
+      <button onClick={executeRemoteCall} data-automation-id="remote-call__execute">
+        execute remote call
+      </button>
+      to{' '}
+      <a href={url} target="_blank">
+        {url}
+      </a>
+      <p>
+        Status:{' '}
+        <span key="status" data-automation-id="remote-call__status">
+          {status}
+        </span>
+      </p>
+      <p>
+        Body:{' '}
+        <span key="body" data-automation-id="remote-call__body">
+          {body}
+        </span>
+      </p>
+    </div>
+  )
 }
