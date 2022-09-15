@@ -1,11 +1,7 @@
 import * as React from 'react'
 
-export class TextInputExample extends React.Component {
-  public render() {
-    return (
-      <div>
-        E-Mail: <input id="email-input" type="email" name="emailaddress" />
-      </div>
-    )
-  }
-}
+export const TextInputExample = () => (
+  <div>
+    E-Mail: <input id="email-input" type="email" name="emailaddress" />
+  </div>
+)
