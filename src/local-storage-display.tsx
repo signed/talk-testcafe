@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import * as React from 'react'
 
 interface Props {
@@ -8,36 +9,31 @@ interface State {
   value: string
 }
 
-export class LocalStorageDisplay extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = { value: '' }
-  }
+export const LocalStorageDisplay = (props: Props) => {
+  const [state, setState] = useState<State>({ value: '' })
 
-  public render() {
-    const keyValue =
-      this.state.value === '' ? (
-        <span>nothing there</span>
-      ) : (
-        <React.Fragment>
-          {this.props.localStorageKey}: <span data-automation-id="value-from-local-storage">{this.state.value}</span>
-        </React.Fragment>
-      )
-
-    return (
-      <div>
-        <button data-automation-id="load-from-local-storage" type="button" onClick={() => this.loadValue()}>
-          load value from local storage
-        </button>
-        {keyValue}
-      </div>
-    )
-  }
-
-  private loadValue() {
-    const value = window.localStorage.getItem(this.props.localStorageKey)
+  const loadValue = () => {
+    const value = window.localStorage.getItem(props.localStorageKey)
     if (value) {
-      this.setState({ value })
+      setState({ value })
     }
   }
+
+  const keyValue =
+    state.value === '' ? (
+      <span>nothing there</span>
+    ) : (
+      <React.Fragment>
+        {props.localStorageKey}: <span data-automation-id="value-from-local-storage">{state.value}</span>
+      </React.Fragment>
+    )
+
+  return (
+    <div>
+      <button data-automation-id="load-from-local-storage" type="button" onClick={loadValue}>
+        load value from local storage
+      </button>
+      {keyValue}
+    </div>
+  )
 }
