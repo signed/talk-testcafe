@@ -1,31 +1,26 @@
 import * as React from 'react'
+import { useState } from 'react'
 
-export class ChangeWithRandomDelay extends React.Component<unknown, { reveal: boolean; timeout: number }> {
-  constructor(props: unknown) {
-    super(props)
-    const maxTimeoutInMilliseconds = 2900
-    this.state = {
-      reveal: false,
-      timeout: Math.floor(Math.random() * maxTimeoutInMilliseconds) + 1,
-    }
+const maxTimeoutInMilliseconds = 2900
+const initialState = {
+  reveal: false,
+  timeout: Math.floor(Math.random() * maxTimeoutInMilliseconds) + 1,
+}
+
+export const ChangeWithRandomDelay = () => {
+  const [state, setState] = useState(initialState)
+
+  const scheduleReveal = () => {
+    const reveal = () => setState((cur) => ({ ...cur, reveal: true }))
+    window.setTimeout(reveal, state.timeout)
   }
 
-  public render() {
-    return (
-      <div>
-        <button onClick={() => this.scheduleReveal()} data-automation-id="change-with-random-delay__reveal">
-          trigger reveal in {this.state.timeout} ms
-        </button>
-        <span data-automation-id="change-with-random-delay__surprise">{this.state.reveal ? 'revealed' : 'hidden'}</span>
-      </div>
-    )
-  }
-
-  private scheduleReveal() {
-    window.setTimeout(() => this.reveal(), this.state.timeout)
-  }
-
-  private reveal() {
-    this.setState({ reveal: true })
-  }
+  return (
+    <div>
+      <button onClick={scheduleReveal} data-automation-id="change-with-random-delay__reveal">
+        trigger reveal in {state.timeout} ms
+      </button>
+      <span data-automation-id="change-with-random-delay__surprise">{state.reveal ? 'revealed' : 'hidden'}</span>
+    </div>
+  )
 }
