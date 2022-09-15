@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {CSSProperties} from 'react';
+import { CSSProperties, PropsWithChildren } from 'react';
 
-export default class BorderWithDescription extends React.Component {
+export default class BorderWithDescription extends React.Component<PropsWithChildren> {
 
   public render() {
     const borderStyle: CSSProperties = {

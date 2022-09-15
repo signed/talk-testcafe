@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import Application from './application';
 
 // @ts-ignore
@@ -7,10 +7,7 @@ window.globalStateToProveAPoint = {
   'value': 'initial'
 };
 
-const app = (<Application/>);
-ReactDOM.render(
-  app,
-  document.getElementById('root'),
-);
+const root = ReactDOM.createRoot(document.getElementById('root')!);
+root.render((<Application/>))
 
 console.log('hello testcafe')
