@@ -1,5 +1,5 @@
 import * as React from 'react'
-import BorderWithDescription from './BorderWithDescription'
+import { BorderWithDescription } from './BorderWithDescription'
 import ButtonWithBreakpoint from './button-with-breakpoint'
 import ChangeWithRandomDelay from './change-with-random-delay'
 import List from './list'
