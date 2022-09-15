@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-export class Stacktrace extends React.Component<{}, {}> {
-  constructor(props: {}, private message: string = 'you asked for it') {
+export class Stacktrace extends React.Component<unknown, unknown> {
+  constructor(props: unknown, private message: string = 'you asked for it') {
     super(props)
     this.triggerError = this.triggerError.bind(this)
   }

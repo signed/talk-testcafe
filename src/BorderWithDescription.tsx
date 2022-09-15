@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { CSSProperties, PropsWithChildren } from 'react'
+import type { CSSProperties, PropsWithChildren } from 'react'
 
 export default class BorderWithDescription extends React.Component<PropsWithChildren> {
   public render() {

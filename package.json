@@ -17,7 +17,8 @@
     "typecheck": "tsc --noEmit",
     "deploy": "gh-pages -d dist",
     "build": "webpack --mode=production",
-    "present": "scribe"
+    "present": "scribe",
+    "lint": "eslint src"
   },
   "dependencies": {
     "react": "18.2.0",
@@ -28,6 +29,9 @@
     "@signed/scribe": "0.4.0",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
+    "@typescript-eslint/eslint-plugin": "5.37.0",
+    "@typescript-eslint/parser": "5.37.0",
+    "eslint": "8.23.1",
     "gh-pages": "4.0.0",
     "html-webpack-plugin": "5.5.0",
     "prettier": "2.7.1",
